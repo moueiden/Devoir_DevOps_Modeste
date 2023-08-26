@@ -1,8 +1,8 @@
 import os 
 import subprocess
-#import requests 
+import requests 
 from pathlib import Path
-#import nbformat
+import nbformat
 # GitHub username and access token (replace with your own values)
 USERNAME = "moueiden"
 
@@ -65,8 +65,8 @@ data = {
   
 # Send a POST request to the API endpoint to create a new repository                              
                                                                                                
-repo_url = f"https://{personal_access_token}@ghttps://github.com/moueiden/{data['name']}.git"
-#repo_url = "https://" + personal_access_token + "@https://github.com/moueiden/tp_depot_branch"
+repo_url = f"https://{personal_access_token}@https://github.com/moueiden/Devoir_DevOps_Modeste{data['name']}.git"
+#repo_url = "https://" + personal_access_token + "@https://github.com/moueiden/Devoir_DevOps_Modeste"
 subprocess.run(["git", "remote", "add", "origin", repo_url], cwd=target_directory)
 
 subprocess.run(["git", "push", "-u", "origin", "master"], cwd=target_directory)
